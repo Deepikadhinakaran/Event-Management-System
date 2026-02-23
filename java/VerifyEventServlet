@@ -1,0 +1,76 @@
+package com.eventmanagement.servlets;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.util.ArrayList;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import com.eventmanagement.models.Event;
+
+@WebServlet("/verify")
+public class VerifyEventServlet extends HttpServlet {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        ArrayList<Event> pendingEvents = new ArrayList<>();
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/event_management", "root", "password");
+
+            String query = "SELECT * FROM events WHERE status = 'Pending'";
+            PreparedStatement pstmt = conn.prepareStatement(query);
+            ResultSet rs = pstmt.executeQuery();
+
+            while (rs.next()) {
+                Event event = new Event(rs.getInt("id"), rs.getString("event_type"), rs.getDate("event_date"),
+                        rs.getTime("start_time"), rs.getTime("end_time"), rs.getString("venue"), rs.getInt("year_of_study"),
+                        rs.getString("section"), rs.getString("guest_person"), rs.getString("guest_designation"),
+                        rs.getString("guest_address"), rs.getString("topic"), rs.getString("description"));
+                pendingEvents.add(event);
+            }
+
+            rs.close();
+            pstmt.close();
+            conn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        request.setAttribute("pendingEvents", pendingEvents);
+        request.getRequestDispatcher("/verification.jsp").forward(request, response);
+    }
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        String action = request.getParameter("action");
+        int eventId = Integer.parseInt(request.getParameter("eventId"));
+
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/event_management", "root", "password");
+
+            String query = "";
+            if ("verify".equals(action)) {
+                query = "UPDATE events SET status = 'Verified' WHERE id = ?";
+            } else if ("query".equals(action)) {
+                query = "UPDATE events SET status = 'Query' WHERE id = ?";
+            }
+
+            PreparedStatement pstmt = conn.prepareStatement(query);
+            pstmt.setInt(1, eventId);
+            pstmt.executeUpdate();
+
+            pstmt.close();
+            conn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        response.sendRedirect("/verify");
+    }
+}
