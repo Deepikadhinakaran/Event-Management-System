@@ -1,0 +1,99 @@
+body {
+	background-image: url('gi.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: repeat; 
+            height: 100vh; /* Full height */
+            margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: antiquewhite;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+h1 {
+    font-size: 36px;
+    margin: 20px 0;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 20px;
+    text-align: center;
+}
+
+center {
+    text-align: center;
+}
+
+hr {
+    border: 0;
+    height: 2px;
+    background-color: antiquewhite;
+    margin: 30px 0;
+}
+
+/* Link Styling */
+a {
+    color: antiquewhite;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Navigation Bar Styling */
+.main {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.main a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 12px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.main a:hover {
+    background-color: rgb(207, 46, 154);
+    color: antiquewhite;
+}
+
+.main a.active {
+    background-color: rgb(207, 46, 154);
+    color: black;
+}
+
+/* Gallery Section */
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.gallery img {
+    width: 300px; /* Adjust the size of each image */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+.background img{
+	    
+}

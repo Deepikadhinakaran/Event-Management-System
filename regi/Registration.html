@@ -1,0 +1,71 @@
+<!-- registration.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration - Event Management System</title>
+    <link rel="stylesheet" href="event.css">
+</head>
+<body>
+    <!-- Unified Navigation -->
+    <div class="main">
+        <a href="../home/home.html">Home</a>
+        <a href="../calendar/calendar.html">Event Calendar</a>
+        <a href="../participation/participation.html">Participation</a>
+        <a href="../notification/notification.html">Notification</a>
+        <a href="../regi/Registration.html">Event Registration</a>
+        <a href="../verification/verification.html">Verification</a>
+    </div>
+
+    <div class="container">
+        <h1>Event Registration</h1>
+        <form id="event-form">
+            <label for="event-type">Event type:</label>
+            <input type="text" id="event-type" name="event-type" required>
+
+            <label for="event-date">Date:</label>
+            <input type="date" id="event-date" name="event-date" required>
+
+            <label for="event-start-time">Start Time:</label>
+            <input type="time" id="event-start-time" name="event-start-time" required>
+
+            <label for="event-end-time">End Time:</label>
+            <input type="time" id="event-end-time" name="event-end-time" required>
+
+            <label for="event-venue">Venue:</label>
+            <input type="text" id="event-venue" name="event-venue" required>
+
+            <label for="year-of-study">Year of Study:</label>
+            <select id="year-of-study" name="year-of-study" required>
+                <option value="2">2nd Year</option>
+                <option value="3">3rd Year</option>
+                <option value="4">4th Year</option>
+            </select>
+
+            <label for="section">Section (Optional):</label>
+            <input type="text" id="section" name="section">
+
+            <label for="guest-person">Guest Person (Optional):</label>
+            <input type="text" id="guest-person" name="guest-person">
+
+            <label for="guest-designation">Guest Designation (Optional):</label>
+            <input type="text" id="guest-designation" name="guest-designation">
+
+            <label for="guest-address">Guest Address (Optional):</label>
+            <textarea id="guest-address" name="guest-address" rows="2"></textarea>
+
+            <label for="topic">Topic:</label>
+            <input type="text" id="topic" name="topic" required>
+
+            <label for="event-description">Event Description:</label>
+            <textarea id="event-description" name="event-description" rows="4" required></textarea>
+
+            <button type="submit">Register Event</button>
+        </form>
+        <p id="confirmation-message"></p>
+    </div>
+
+    <script src="registration.js"></script>
+</body>
+</html>

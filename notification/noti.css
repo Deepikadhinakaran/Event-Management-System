@@ -1,0 +1,84 @@
+body {
+    background-image: url('gi.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: repeat; 
+            height: 100vh; /* Full height */
+            margin: 0;
+    background-color: black;
+    font-family: Arial, sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    width: 100%;
+    overflow: hidden;
+    background-color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.main a:hover {
+    background-color: #575757;
+}
+
+.main a.active {
+    background-color: rgb(207, 46, 154);
+    color: white;
+}
+
+.container {
+    margin: 20px auto;
+    width: 90%;
+    text-align: left;
+    color: #dddddd;
+}
+
+h1 {
+    color: #ffffff;
+    margin-top: 20px;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.notification-table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+    border: 2px solid #ddd; /* Border around the entire table */
+}
+
+.notification-table th, .notification-table td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd; /* Border around each cell */
+}
+
+.notification-table th {
+    background-color: rgb(207, 46, 154);
+    color: white;
+    border: 1px solid #bbb; /* Border around header cells */
+}
+
+.notification-table tr:hover {
+    background-color: #575757;
+}
+
+.notification-table td {
+    color: #dddddd;
+    line-height: 1.6;
+}

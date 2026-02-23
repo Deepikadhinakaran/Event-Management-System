@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Verification - Event Management System</title>
+    <link rel="stylesheet" href="verification.css">
+</head>
+<body>
+    <!-- Unified Navigation -->
+    <div class="main">
+        <a href="../home/home.html">Home</a>
+        <a href="../calendar/calendar.html">Event Calendar</a>
+        <a href="../participation/participation.html">Participation</a>
+        <a href="../notification/notification.html">Notification</a>
+        <a href="../regi/Registration.html">Event Registration</a>
+        <a href="../verification/verification.html">Verification</a>
+    </div>
+
+    <div class="container">
+        <h1>Event Verification</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Event Name</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Venue</th>
+                    <th>Year of Study</th>
+                    <th>Section</th>
+                    <th>Guest Person</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="event-table-body">
+                <!-- Rows of events will be populated here by JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Query Modal -->
+    <div id="query-modal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Ask a Question About the Event</h2>
+            <p id="query-event-name" style="color: rgb(207, 46, 154); margin-bottom: 15px;"></p>
+            <textarea id="query-question" rows="4" cols="50" placeholder="Enter your question..." style="width: 100%; padding: 10px; border-radius: 5px; border: 1px solid #444; background: #2a2a3e; color: white;"></textarea>
+            <button id="submit-query" style="margin-top: 15px; padding: 10px 20px; background: linear-gradient(90deg, rgb(207, 46, 154), rgb(183, 73, 211)); color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">Submit Query</button>
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="verification.js"></script>
+</body>
+</html>

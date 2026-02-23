@@ -1,0 +1,171 @@
+body {
+    background-image: url('blue.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100vh; 
+    margin: 0;
+    background-color: black;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    color: rgb(207, 46, 154);
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+p {
+    color: #dddddd;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.login-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    background-color: rgb(207, 46, 154);
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #4a2a6e;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(207, 46, 154, 0.4);
+}
+
+/* Modal Background */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(5px);
+}
+
+/* Modal Content - Centered */
+.modal-content {
+    background-color: #1a1a2e;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    margin: auto;
+    padding: 40px;
+    border: 2px solid rgb(207, 46, 154);
+    border-radius: 15px;
+    width: 90%;
+    max-width: 450px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 10px 40px rgba(207, 46, 154, 0.3);
+    text-align: left;
+}
+
+/* Modal Header */
+.modal-content h2 {
+    color: rgb(207, 46, 154);
+    margin: 0 0 25px 0;
+    padding: 0;
+    text-align: center;
+    font-size: 28px;
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #aaa;
+    transition: color 0.3s;
+    line-height: 1;
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(207, 46, 154);
+}
+
+/* Form Labels */
+.modal-content label {
+    display: block;
+    color: #dddddd;
+    margin-bottom: 8px;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Input Fields */
+input[type="text"], 
+input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 8px 0 20px 0;
+    background-color: #2a2a3e;
+    border: 1px solid #575757;
+    border-radius: 8px;
+    color: white;
+    font-size: 15px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus, 
+input[type="password"]:focus {
+    outline: none;
+    border-color: rgb(207, 46, 154);
+    background-color: #333348;
+    box-shadow: 0 0 10px rgba(207, 46, 154, 0.3);
+}
+
+/* Submit Button */
+button[type="submit"] {
+    width: 100%;
+    background: linear-gradient(90deg, rgb(207, 46, 154), rgb(183, 73, 211));
+    border: none;
+    padding: 14px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 15px;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background: linear-gradient(90deg, rgb(183, 73, 211), rgb(207, 46, 154));
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(207, 46, 154, 0.4);
+}
+
+/* Form styling */
+form {
+    margin-top: 10px;
+}

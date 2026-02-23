@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page - Event Management System</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+   
+    
+    <div class="container">
+        <h1>Event Management System</h1>
+        <p>Select a domain to log in:</p>
+
+        <div class="login-options">
+            <button id="student-login-btn">Student Login</button>
+            <button id="staff-login-btn">Staff Login</button>
+            <button id="hod-login-btn">HOD Login</button>
+        </div>
+    </div>
+
+    <!-- Student Login Modal -->
+    <div id="student-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-student">&times;</span>
+            <h2>Student Login</h2>
+            <form id="student-login-form">
+                <label for="student-username">Username:</label>
+                <input type="text" id="student-username" required>
+                
+                <label for="student-password">Password:</label>
+                <input type="password" id="student-password" required>
+
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Staff Login Modal -->
+    <div id="staff-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-staff">&times;</span>
+            <h2>Staff Login</h2>
+            <form id="staff-login-form">
+                <label for="staff-username">Username:</label>
+                <input type="text" id="staff-username" required>
+                
+                <label for="staff-password">Password:</label>
+                <input type="password" id="staff-password" required>
+
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- HOD Login Modal -->
+    <div id="hod-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="close-hod">&times;</span>
+            <h2>HOD Login</h2>
+            <form id="hod-login-form">
+                <label for="hod-username">Username:</label>
+                <input type="text" id="hod-username" required>
+                
+                <label for="hod-password">Password:</label>
+                <input type="password" id="hod-password" required>
+
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="login.js"></script>
+</body>
+</html>
