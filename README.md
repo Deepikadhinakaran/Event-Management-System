@@ -3,6 +3,8 @@
 A full-featured web application for managing college/university events with role-based access, event verification, and real-time notifications.
 
 ![login](https://github.com/user-attachments/assets/d7649adb-dd1c-49a4-b209-b09b93a2a956)
+![verify](https://github.com/user-attachments/assets/18e2a94c-d405-4958-857e-00b772ec7a22)
+![preview](https://github.com/user-attachments/assets/142c2228-dff1-4c9c-81ba-bbdbb56b372e)
 
 
 ✨ Features
